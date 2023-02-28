@@ -22,6 +22,16 @@ namespace Busines.Concrate
             //İş Kodları
             return _CarDal.GetAll();
         }
+
+        public List<Car> GetAllByCategoryId(int id)
+        {
+            return _CarDal.GetAll(p => p.CarId == id);
+        }
+
+        public List<Car> GetByUniytPrice(decimal min, decimal max)
+        {
+            return _CarDal.GetAll(p => p.UnitPrice <= min && p.UnitPrice <= max);
+        }
     }
     
 }

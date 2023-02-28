@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrate\EntityFramwork\" />
+    <Compile Remove="Concrate\EntityFramwork\**" />
+    <EmbeddedResource Remove="Concrate\EntityFramwork\**" />
+    <None Remove="Concrate\EntityFramwork\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.11" />
   </ItemGroup>
 
   <ItemGroup>
